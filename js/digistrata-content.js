@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (thirdCard) {
                 const title = thirdCard.querySelector('.port-card-title');
                 const tag = thirdCard.querySelector('.port-card-tag');
-                if (title) title.textContent = 'Inteligencia';
-                if (tag) tag.textContent = 'Análisis de datos para decisiones más inteligentes';
+                if (title) title.textContent = 'Business Intelligence';
+                if (tag) tag.textContent = 'Dashboards y reportes para decisiones basadas en datos';
             }
         }
     }
