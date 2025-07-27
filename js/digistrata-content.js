@@ -358,4 +358,4 @@ document.addEventListener('DOMContentLoaded', function() {
             errorMessage.textContent = 'Ups! Hubo un error al enviar el formulario. Por favor intentá nuevamente.';
         }
     }
-}
+});
