@@ -1,0 +1,103 @@
+/* Digistrata Custom Styles */
+
+/* CTA Button in Navigation */
+.header-link-wrap.cta {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 8px 20px;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.header-link-wrap.cta:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.header-link-wrap.cta .navbar-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Enhanced hero section */
+.hero-paragraph p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: "Inter Tight", sans-serif;
+}
+
+/* Service section improvements */
+.service-wrap {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.service-detail-text {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 0.9rem;
+}
+
+/* About section improvements */
+.big-text {
+  font-family: "Inter Tight", sans-serif;
+  line-height: 1.5;
+}
+
+/* Portfolio cards improvements */
+.port-card-title {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.port-card-tag {
+  font-family: "Inter Tight", sans-serif;
+}
+
+/* FAQ section improvements */
+.accordion-title {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.faq-paragraph {
+  font-family: "Inter Tight", sans-serif;
+  line-height: 1.6;
+}
+
+/* Contact section improvements */
+.contact-heading-wrap h2 {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.form-label {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.form-text-field {
+  font-family: "Inter Tight", sans-serif;
+}
+
+/* Footer improvements */
+.footer-copyright {
+  font-family: "Inter Tight", sans-serif;
+}
+
+/* Responsive improvements */
+@media (max-width: 991px) {
+  .header-link-wrap.cta {
+    margin-left: 0;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-paragraph p {
+    font-size: 1rem;
+  }
+  
+  .header-link-wrap.cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
