@@ -1,0 +1,264 @@
+/* Background Decorations for Black Sections */
+
+/* Main decorative elements container */
+.section-horizontal, .section.pricing, .section.testimonial {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add decorative elements after the main sections */
+.section-horizontal::before,
+.section.pricing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.1;
+  background-image: 
+    /* Diagonal lines */
+    linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.1) 49.5%, rgba(255, 255, 255, 0.1) 50.5%, transparent 51%),
+    /* Grid pattern */
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 
+    80px 80px,
+    40px 40px,
+    40px 40px;
+  background-position: 
+    0 0,
+    0 0,
+    0 0;
+}
+
+/* Animated floating elements */
+.section-horizontal::after,
+.section.pricing::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.08;
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.06) 3px, transparent 3px);
+  background-size: 
+    120px 120px,
+    80px 80px,
+    160px 160px;
+  animation: floatingPatterns 30s linear infinite;
+}
+
+/* Geometric shapes for portfolio sections */
+.portfolio-wrap::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: rotate 20s linear infinite;
+}
+
+.portfolio-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 15%;
+  right: 8%;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 1;
+  animation: float 15s ease-in-out infinite;
+}
+
+/* Triangular elements */
+.portfolio-2-wrap::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+  z-index: 1;
+  animation: pulse 8s ease-in-out infinite;
+}
+
+/* Pricing section specific decorations */
+.pricing-wrap::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.1) 20%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 80%, 
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.pricing-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(
+    180deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.08) 30%, 
+    rgba(255, 255, 255, 0.03) 50%, 
+    rgba(255, 255, 255, 0.08) 70%, 
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Ensure content stays above decorations */
+.portfolio-wrap > *:not(::before):not(::after),
+.pricing-wrap > *:not(::before):not(::after) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animations */
+@keyframes floatingPatterns {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  25% { transform: translateX(20px) translateY(-10px) rotate(90deg); }
+  50% { transform: translateX(0) translateY(-20px) rotate(180deg); }
+  75% { transform: translateX(-20px) translateY(-10px) rotate(270deg); }
+  100% { transform: translateX(0) translateY(0) rotate(360deg); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.04; transform: scale(1); }
+  50% { opacity: 0.08; transform: scale(1.1); }
+}
+
+/* Additional corner decorations */
+.section-horizontal .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    -45deg, 
+    transparent 48%, 
+    rgba(255, 255, 255, 0.06) 49%, 
+    rgba(255, 255, 255, 0.06) 51%, 
+    transparent 52%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-horizontal .container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(
+    circle at center, 
+    rgba(255, 255, 255, 0.04) 30%, 
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .section-horizontal::before,
+  .section.pricing::before {
+    background-size: 
+      60px 60px,
+      30px 30px,
+      30px 30px;
+  }
+  
+  .portfolio-wrap::before {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .portfolio-wrap::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-horizontal::before,
+  .section.pricing::before {
+    opacity: 0.05;
+    background-size: 
+      40px 40px,
+      20px 20px,
+      20px 20px;
+  }
+  
+  .portfolio-wrap::before,
+  .portfolio-wrap::after {
+    display: none;
+  }
+  
+  .portfolio-2-wrap::before {
+    border-left-width: 30px;
+    border-right-width: 30px;
+    border-bottom-width: 50px;
+  }
+}
+
+/* Subtle glow effects */
+.portfolio-card:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.pricing-card:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.03);
+}
