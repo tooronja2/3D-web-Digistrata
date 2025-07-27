@@ -81,6 +81,55 @@
   font-family: "Inter Tight", sans-serif;
 }
 
+/* Image improvements */
+.portfolio-image {
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  object-fit: cover;
+  filter: none !important;
+}
+
+.portfolio-image:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-image {
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  object-fit: cover;
+  width: 68px;
+  height: 68px;
+}
+
+.testimonial-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Portfolio card improvements */
+.portfolio-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.portfolio-image-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+}
+
+/* Enhanced testimonial card styling */
+.testimonial-card {
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
 /* Responsive improvements */
 @media (max-width: 991px) {
   .header-link-wrap.cta {
@@ -89,15 +138,28 @@
     display: inline-block;
     text-align: center;
   }
+
+  .portfolio-image {
+    border-radius: 8px;
+  }
 }
 
 @media (max-width: 767px) {
   .hero-paragraph p {
     font-size: 1rem;
   }
-  
+
   .header-link-wrap.cta {
     width: 100%;
     justify-content: center;
+  }
+
+  .portfolio-image {
+    border-radius: 6px;
+  }
+
+  .testimonial-image {
+    width: 56px;
+    height: 56px;
   }
 }
