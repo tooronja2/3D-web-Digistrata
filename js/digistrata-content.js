@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updatePageContent() {
         
         // Update page title and meta
-        document.title = "Digistrata - Transformación Digital para Empresas";
+        document.title = "Digistrata - Desarrollo Web y Automatización para Empresas";
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = "Transformación digital para tu empresa, desde la primera web hasta la automatización integral. Soluciones modulares, accesibles y a medida.";
+            metaDescription.content = "Llevamos tu empresa al siguiente nivel tecnológico, desde tu primera web hasta automatización completa. Soluciones modulares, accesibles y a medida.";
         }
         
         // Update Hero Section
