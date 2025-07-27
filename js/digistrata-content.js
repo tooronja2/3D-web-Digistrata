@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const contactTitle = document.querySelector('#contact h2');
         if (contactTitle) {
-            contactTitle.innerHTML = 'hablemos de tu<br/>transformación digital';
+            contactTitle.innerHTML = 'hablemos de tu<br/>proyecto tecnológico';
         }
         
         // Update contact info
