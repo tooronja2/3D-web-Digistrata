@@ -258,35 +258,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Auto-scroll animation for development web plans
-        function autoScrollPlans() {
-            const developmentGrid = document.querySelector('.pricing-grid.development-web');
-            if (developmentGrid && window.innerWidth > 768) {
-                let scrollAmount = 0;
-                const scrollStep = 1;
-                const maxScroll = developmentGrid.scrollWidth - developmentGrid.clientWidth;
 
-                const scroll = () => {
-                    scrollAmount += scrollStep;
-                    if (scrollAmount >= maxScroll) {
-                        scrollAmount = 0;
-                    }
-                    developmentGrid.scrollLeft = scrollAmount;
-                };
-
-                // Start auto-scroll when development web tab is active
-                const developmentTab = document.querySelector('[data-tab="desarrollo-web"]');
-                if (developmentTab && developmentTab.classList.contains('active')) {
-                    const scrollInterval = setInterval(scroll, 50);
-
-                    // Stop auto-scroll on user interaction
-                    developmentGrid.addEventListener('mouseenter', () => clearInterval(scrollInterval));
-                    developmentGrid.addEventListener('touchstart', () => clearInterval(scrollInterval));
-                }
-            }
-        }
-
-        // Initialize auto-scroll after a delay
-        setTimeout(autoScrollPlans, 3000);
     }
 });
