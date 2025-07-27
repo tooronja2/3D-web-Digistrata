@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update about section content
         const aboutBigText = document.querySelector('.about-wrap .big-text');
         if (aboutBigText) {
-            aboutBigText.textContent = 'Acompañamos a empresas en su transformación digital. Desde su primer sitio web hasta automatización de procesos y ciberseguridad. Integramos todo en un solo ecosistema digital para que ganes tiempo, clientes y control sin depender de múltiples proveedores.';
+            aboutBigText.textContent = 'Acompañamos a empresas a modernizar su tecnología y procesos. Desde su primer sitio web hasta automatización avanzada y ciberseguridad. Integramos todo en un ecosistema cohesivo para que ganes tiempo, clientes y control sin depender de múltiples proveedores.';
         }
         
         // Update number
