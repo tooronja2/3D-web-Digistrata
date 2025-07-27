@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const whatsTheyAreSaying = document.querySelector('#testimonial .text-medium');
         if (whatsTheyAreSaying) {
-            whatsTheyAreSaying.textContent = 'Stack moderno y confiable para tu transformación digital';
+            whatsTheyAreSaying.textContent = 'Stack moderno y confiable para impulsar tu negocio';
         }
         
         // Update testimonial cards to show technologies
