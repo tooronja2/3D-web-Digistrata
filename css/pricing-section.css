@@ -6,6 +6,18 @@
   font-family: "Inter Tight", sans-serif;
 }
 
+/* Animation Base Styles */
+.section.pricing * {
+  will-change: transform, opacity;
+}
+
+.pricing-heading,
+.pricing-tab,
+.pricing-card,
+.pricing-custom {
+  transform-style: preserve-3d;
+}
+
 .pricing-wrap {
   max-width: 1200px;
   margin: 0 auto;
