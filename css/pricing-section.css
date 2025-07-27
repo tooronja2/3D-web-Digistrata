@@ -3,6 +3,7 @@
   padding: 120px 0;
   background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
   color: white;
+  font-family: "Inter Tight", sans-serif;
 }
 
 .pricing-wrap {
@@ -20,6 +21,7 @@
   font-weight: 700;
   margin-bottom: 30px;
   color: white;
+  font-family: "Inter Tight", sans-serif;
 }
 
 .pricing-tabs {
