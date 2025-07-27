@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update hero description
         const heroDescription = document.querySelector('.hero-paragraph p');
         if (heroDescription) {
-            heroDescription.innerHTML = `Transformación digital para tu empresa, desde la primera web hasta la automatización integral.<br/>
+            heroDescription.innerHTML = `Llevamos tu empresa al siguiente nivel tecnológico, desde tu primera web hasta automatización completa.<br/>
             Soluciones modulares, accesibles y a medida que te hacen vender más, trabajar mejor y ahorrar tiempo.`;
         }
         
