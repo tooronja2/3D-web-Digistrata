@@ -144,6 +144,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (tag) tag.textContent = 'Dashboards y reportes para decisiones basadas en datos';
             }
         }
+
+        if (worksTwoCards[1]) {
+            const fourthCard = worksTwoCards[1].closest('._4th-portfolio-card');
+            if (fourthCard) {
+                const title = fourthCard.querySelector('.port-card-title');
+                const tag = fourthCard.querySelector('.port-card-tag');
+                if (title) title.textContent = 'Apps Móviles';
+                if (tag) tag.textContent = 'Aplicaciones nativas y PWA para todos los dispositivos';
+            }
+        }
+
+        if (worksTwoCards[2]) {
+            const fifthCard = worksTwoCards[2].closest('._5th-portfolio-card');
+            if (fifthCard) {
+                const title = fifthCard.querySelector('.port-card-title');
+                const tag = fifthCard.querySelector('.port-card-tag');
+                if (title) title.textContent = 'Cloud & DevOps';
+                if (tag) tag.textContent = 'Infraestructura escalable y deployment automatizado';
+            }
+        }
     }
     
     function updateServiceSection() {
